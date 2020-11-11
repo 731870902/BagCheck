@@ -18,7 +18,7 @@
             v-else
           />
         </mt-tab-item>
-        <mt-tab-item id="agent">
+        <mt-tab-item id="seekagent">
           找经纪人
           <img
              src="../assets/common/news.png"

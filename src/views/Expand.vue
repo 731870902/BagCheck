@@ -1,3 +1,5 @@
 <template>
-  <div class="expand"></div>
+  <div class="expand">
+    <my-bottom></my-bottom>
+  </div>
 </template>

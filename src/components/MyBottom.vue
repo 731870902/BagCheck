@@ -6,13 +6,13 @@
         <mt-tab-item id="index">
           首页
           <img
-            src="../assets/common/news.png"
+            src="../assets/common/index_yes.png"
             alt=""
             slot="icon"
-            v-if="selectedTab == 'sy'"
+            v-if="selectedTab == 'index'"
           />
           <img
-            src="../assets/common/news.png"
+            src="../assets/common/index_no.png"
             alt=""
             slot="icon"
             v-else
@@ -21,32 +21,32 @@
         <mt-tab-item id="seekagent">
           找经纪人
           <img
-             src="../assets/common/news.png"
+             src="../assets/common/seekagent_yes.png"
             alt=""
             slot="icon"
-            v-if="selectedTab == 'fl'"
+            v-if="selectedTab == 'seekagent'"
           />
-          <img  src="../assets/common/news.png" alt="" slot="icon" v-else />
+          <img  src="../assets/common/seekagent_no.png" alt="" slot="icon" v-else />
         </mt-tab-item>
         <mt-tab-item id="expand">
           百科
           <img
-             src="../assets/common/news.png"
+             src="../assets/common/expand_yes.png"
             alt=""
             slot="icon"
-            v-if="selectedTab == 'bk'"
+            v-if="selectedTab == 'expand'"
           />
-          <img  src="../assets/common/news.png" alt="" slot="icon" v-else />
+          <img  src="../assets/common/expand_no.png" alt="" slot="icon" v-else />
         </mt-tab-item>
         <mt-tab-item id="mine">
           我的
           <img
-            src="../assets/common/news.png"
+            src="../assets/common/mine_yes.png"
             alt=""
             slot="icon"
-            v-if="selectedTab == 'wd'"
+            v-if="selectedTab == 'mine'"
           />
-          <img  src="../assets/common/news.png" alt="" slot="icon" v-else />
+          <img  src="../assets/common/mine_no.png" alt="" slot="icon" v-else />
         </mt-tab-item>
       </mt-tabbar>
     </div>
@@ -68,8 +68,12 @@
   float: left;
   margin-right: 15px;
 }
+#bottom .mint-tabbar > .mint-tab-item{
+  color: #cdcdcd;
+}
 #bottom .mint-tabbar > .mint-tab-item.is-selected {
-  color: cornflowerblue;
+  color:#000;
+  background: #fff
 }
 </style>
 
@@ -77,16 +81,16 @@
 export default {
   data(){
     return{
-      selectedTab:''
+      selectedTab:'index'
     }
   },
   name:'MyBottom',
   mounted(){
     var path=this.$route.path;
     if(path=='/'){
-      this.selected=="index"
+      this.selectedTab=="index"
     }else{
-      this.selected=path.split('/')[1];
+      this.selectedTab=path.split('/')[1];
     }
   },
   watch:{
